@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章管理 - SMART 眼健康平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/global.css">
+    <link rel="stylesheet" href="/assets/pages.css">
+    <script type="module" src="/components/navbar-component.js"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <navbar-component style="flex-shrink: 0;"></navbar-component>
+        <main>
+            <div class="main-top">
+                <div class="main-top__container">
+                    <div class="main-top__title">
+                        <h1 class="main-top__title-text">文章管理</h1>
+                        <div class="ml-2 relative group">
+                            <i class="fas fa-info-circle text-blue-400 cursor-pointer"></i>
+                            <div class="main-top-helper">
+                                管理平台所有文章內容
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="main-panel">
+                <div class="main-panel-action px-6 py-4 flex justify-between">
+                    <div class="main-panel-action-left">
+                        <div class="flex space-x-4">
+                            <button class="p_tab-btn active" data-tab="single-page">
+                                <i class="fas fa-file-alt mr-2"></i>
+                                單頁
+                            </button>
+                            <button class="p_tab-btn" data-tab="category-article">
+                                <i class="fas fa-folder-open mr-2"></i>
+                                分類文章
+                            </button>
+                        </div>
+                    </div>
+                    <div class="main-panel-action-right">
+                        <button class="p_btn-primary">
+                            <i class="fas fa-plus mr-2"></i>
+                            新增文章
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="main-panel-func">
+                    <div class="overflow-x-auto bg-white rounded-lg shadow">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">分類</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">標題</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">作者</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">狀態</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <!-- 文章列表內容將動態生成 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/assets/pages.js"></script>
+</body>
+</html>
